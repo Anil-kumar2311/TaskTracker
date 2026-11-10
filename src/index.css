@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #202333;
+  background-color: #f7f8fc;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7f8fc 0%, #eef2ff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-soft;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none transition focus:border-primary focus:bg-white;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-90;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  color: #e5e7eb;
+  background-color: #0b1020;
+}
+
+:root[data-theme='dark'] body {
+  color: #e5e7eb;
+  background: linear-gradient(180deg, #0b1020 0%, #111827 100%);
+}
+
+:root[data-theme='dark'] #root,
+:root[data-theme='dark'] .bg-background {
+  color: #e5e7eb;
+  background-color: #0b1020;
+  background-image: none;
+}
+
+:root[data-theme='dark'] .card {
+  color: #e5e7eb;
+  background-color: #151c2d;
+  border-color: #334155;
+}
+
+:root[data-theme='dark'] .bg-white,
+:root[data-theme='dark'] .bg-white\/80,
+:root[data-theme='dark'] header,
+:root[data-theme='dark'] aside {
+  background-color: #151c2d;
+}
+
+:root[data-theme='dark'] .bg-slate-50,
+:root[data-theme='dark'] .bg-slate-100 {
+  background-color: #1d2638;
+}
+
+:root[data-theme='dark'] .bg-slate-200 {
+  background-color: #374151;
+}
+
+:root[data-theme='dark'] .bg-violet-50,
+:root[data-theme='dark'] .bg-indigo-50 {
+  background-color: #24213b;
+}
+
+:root[data-theme='dark'] .bg-amber-50 {
+  background-color: #3b2f1e;
+}
+
+:root[data-theme='dark'] .bg-red-50 {
+  background-color: #3b2028;
+}
+
+:root[data-theme='dark'] .border-slate-200,
+:root[data-theme='dark'] .border-slate-100 {
+  border-color: #334155;
+}
+
+:root[data-theme='dark'] .border-violet-100,
+:root[data-theme='dark'] .border-violet-200 {
+  border-color: #443c73;
+}
+
+:root[data-theme='dark'] .text-slate-800,
+:root[data-theme='dark'] .text-slate-700 {
+  color: #e5e7eb;
+}
+
+:root[data-theme='dark'] .text-slate-600,
+:root[data-theme='dark'] .text-slate-500,
+:root[data-theme='dark'] .text-slate-400 {
+  color: #a7b0c0;
+}
+
+:root[data-theme='dark'] .input {
+  color: #e5e7eb;
+  background-color: #1d2638;
+  border-color: #334155;
+}
+
+:root[data-theme='dark'] .input::placeholder {
+  color: #9ca3af;
+}
+
+:root[data-theme='dark'] .button-secondary {
+  color: #e5e7eb;
+  background-color: #1d2638;
+  border-color: #334155;
+}
+
+:root[data-theme='dark'] .hover\:bg-slate-100:hover {
+  background-color: #293449;
+}
+
+:root[data-theme='dark'] input[type='date'],
+:root[data-theme='dark'] input[type='datetime-local'],
+:root[data-theme='dark'] select,
+:root[data-theme='dark'] option {
+  color-scheme: dark;
+}
+
+.sticky-note-card,
+.sticky-note-card :is(input, textarea, button, p, span) {
+  color: #202333 !important;
+}
+
+.sticky-note-card input::placeholder,
+.sticky-note-card textarea::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
